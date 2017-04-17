@@ -10,6 +10,7 @@
 		29AB6D401EA4E4F900456722 /* ViperCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AB6D3F1EA4E4F900456722 /* ViperCommand.swift */; };
 		29AB6D441EA4F77900456722 /* MVCCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AB6D431EA4F77900456722 /* MVCCommand.swift */; };
 		29AB6D461EA4F9DB00456722 /* MVVMCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AB6D451EA4F9DB00456722 /* MVVMCommand.swift */; };
+		29AB6D481EA4FD8800456722 /* AbstractTemplateCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AB6D471EA4FD8800456722 /* AbstractTemplateCommand.swift */; };
 		OBJ_101 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Files.framework */; };
 		OBJ_102 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* Result.framework */; };
 		OBJ_103 /* Commandant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* Commandant.framework */; };
@@ -73,6 +74,7 @@
 		29AB6D3F1EA4E4F900456722 /* ViperCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperCommand.swift; sourceTree = "<group>"; };
 		29AB6D431EA4F77900456722 /* MVCCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCCommand.swift; sourceTree = "<group>"; };
 		29AB6D451EA4F9DB00456722 /* MVVMCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCommand.swift; sourceTree = "<group>"; };
+		29AB6D471EA4FD8800456722 /* AbstractTemplateCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbstractTemplateCommand.swift; sourceTree = "<group>"; };
 		OBJ_15 /* PlaceHoldable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHoldable.swift; sourceTree = "<group>"; };
 		OBJ_16 /* PlaceHolderNameInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderNameInjector.swift; sourceTree = "<group>"; };
 		OBJ_18 /* BuildInTemplates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildInTemplates.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		29AB6D3E1EA4E4F900456722 /* Commands */ = {
 			isa = PBXGroup;
 			children = (
+				29AB6D471EA4FD8800456722 /* AbstractTemplateCommand.swift */,
 				29AB6D3F1EA4E4F900456722 /* ViperCommand.swift */,
 				29AB6D431EA4F77900456722 /* MVCCommand.swift */,
 				29AB6D451EA4F9DB00456722 /* MVVMCommand.swift */,
@@ -439,6 +442,7 @@
 				OBJ_94 /* BuildInTemplates.swift in Sources */,
 				OBJ_95 /* TemplateGenerator.swift in Sources */,
 				OBJ_96 /* TemplateParser.swift in Sources */,
+				29AB6D481EA4FD8800456722 /* AbstractTemplateCommand.swift in Sources */,
 				OBJ_97 /* File.swift in Sources */,
 				OBJ_98 /* Folder.swift in Sources */,
 				OBJ_99 /* TemplateProtocols.swift in Sources */,
