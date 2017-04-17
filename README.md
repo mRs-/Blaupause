@@ -10,7 +10,7 @@ Blaupause viper FooBar
 # ToDo
 - [x] Creating MVC Command
 - [x] Creating MVVM Command
-- [ ] Error Handling if the Folder is already there
+- [x] Error Handling if the Folder is already there
 - [ ] JSON Parsing for template files
 - [ ] Create a wizard when starting without options
 - [ ] Publish it to Homebrew

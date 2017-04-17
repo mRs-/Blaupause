@@ -21,20 +21,18 @@ struct Folder: TemplateGenerateable, TemplateParantable {
         self.children = children
     }
     
-    func generate(with currentPath: String) -> RelativePath? {
+    func generate(with currentPath: String) throws -> RelativePath? {
         
-        do {
-            try Files.Folder(path: currentPath).createSubfolder(named: nameWithoutPlaceHolder)
-            print("Created Folder \(nameWithoutPlaceHolder)")
-            
-            if currentPath.characters.count == 0 {
-                return nameWithoutPlaceHolder
-            } else {
-                return "\(currentPath)/\(nameWithoutPlaceHolder)"
-            }
-        } catch {
-            print("Can't create Folder \(nameWithoutPlaceHolder)")
-            return nil
+        try Files.Folder(path: currentPath).createSubfolder(named: nameWithoutPlaceHolder)
+        
+        return fullPath(for:currentPath)
+    }
+    
+    private func fullPath(`for` path: String) -> String {
+        if path.characters.count == 0 {
+            return nameWithoutPlaceHolder
+        } else {
+            return "\(path)/\(nameWithoutPlaceHolder)"
         }
     }
 }

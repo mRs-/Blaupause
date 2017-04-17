@@ -16,7 +16,7 @@ protocol TemplateNameable {
 
 protocol TemplateGenerateable: TemplateNameable {
     var placeHolderProvider: PlaceholderNameable! { get set }
-    func generate(with currentPath: String) -> RelativePath?
+    func generate(with currentPath: String) throws -> RelativePath?
 }
 
 extension TemplateGenerateable {

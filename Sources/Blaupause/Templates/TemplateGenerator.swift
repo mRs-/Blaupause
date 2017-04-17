@@ -18,20 +18,22 @@ class TemplateGenerator {
         self.placeHolderProvider = placeHolderProvider
     }
     
-    func generate() {
-        generate(with: templates)
+    func generate() throws {
+        
+        try generate(with: templates)
     }
     
-    private func generate(with templates: [TemplateGenerateable], and relativePath: RelativePath = "") {
-        templates.forEach {
+    private func generate(with templates: [TemplateGenerateable], and relativePath: RelativePath = "") throws {
+        
+        try templates.forEach {
             
             var template = $0
             template.placeHolderProvider = placeHolderProvider
             
-            let returnedRelativePath = template.generate(with: relativePath) ?? ""
+            let returnedRelativePath = try template.generate(with: relativePath) ?? ""
             
             if let children = (template as? TemplateParantable)?.children {
-                generate(with: children, and: returnedRelativePath)
+                try generate(with: children, and: returnedRelativePath)
             }
         }
     }

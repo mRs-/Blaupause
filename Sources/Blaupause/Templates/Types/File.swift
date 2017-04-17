@@ -18,15 +18,8 @@ struct File: TemplateGenerateable {
         self.name = name
     }
     
-    func generate(with currentPath: String = "") -> RelativePath? {
-        
-        do {
-            try Files.Folder(path: currentPath).createFile(named: nameWithoutPlaceHolder)
-            print("Created File \(nameWithoutPlaceHolder)")
-            return nil
-        } catch {
-            print("Can't create File \(nameWithoutPlaceHolder)")
-            return nil
-        }
+    func generate(with currentPath: String = "") throws -> RelativePath? {
+        try Files.Folder(path: currentPath).createFile(named: nameWithoutPlaceHolder)
+        return nil // we need no path for files
     }
 }

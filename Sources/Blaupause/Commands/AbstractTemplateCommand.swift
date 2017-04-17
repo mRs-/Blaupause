@@ -36,8 +36,13 @@ class AbstractTemplateCommand: CommandProtocol {
         let template = self.template.template()
         let placeHolderProvider = PlaceHolderProvider(placeHolderName: options.moduleName)
         let generator = TemplateGenerator(with: template, and: placeHolderProvider)
-        generator.generate()
         
-        return .success()
+        do {
+            try generator.generate()
+            return .success()
+        } catch {
+            print(error)
+            exit(2)
+        }
     }
 }
