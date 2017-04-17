@@ -15,6 +15,8 @@ DispatchQueue.global().async {
     let registry = CommandRegistry<CommandantError<()>>()
     
     registry.register(ViperCommand())
+    registry.register(MVCCommand())
+    registry.register(MVVMCommand())
     registry.register(HelpCommand(registry: registry))
     
     

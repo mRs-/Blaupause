@@ -11,15 +11,40 @@ import Foundation
 enum BuildInTemplates {
     case Viper
     case MVC
+    case MVVM
     
     func template() -> [TemplateGenerateable] {
         switch self {
         case .MVC:
             return [
                 Folder(name: "*", children: [
-                    Folder(name: "Model", children: nil),
-                    Folder(name: "View", children: nil),
-                    Folder(name: "Controller", children: nil)
+                    Folder(name: "Model", children: [
+                        File(name: "*Model.swift")
+                        ]),
+                    Folder(name: "View", children: [
+                        File(name: "*View.swift")
+                        ]),
+                    Folder(name: "Controller", children: [
+                        File(name: "*ViewController.swift")
+                        ])
+                    ]
+                )
+            ]
+        case .MVVM:
+            return [
+                Folder(name: "*", children: [
+                    Folder(name: "Model", children: [
+                        File(name: "*Model.swift")
+                        ]),
+                    Folder(name: "View", children: [
+                        File(name: "*View.swift")
+                        ]),
+                    Folder(name: "ViewModel", children: [
+                        File(name: "*ViewModel.swift")
+                        ]),
+                    Folder(name: "Controller", children: [
+                        File(name: "*ViewController.swift")
+                        ])
                     ]
                 )
             ]

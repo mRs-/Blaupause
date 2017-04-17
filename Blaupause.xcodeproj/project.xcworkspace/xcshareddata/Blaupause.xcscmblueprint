@@ -1,0 +1,44 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5EDDBFA6D441DDCE33D718BFADEE5FFEEEA3D134",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "380E7A403870368C5E27D2180E11354FCFF4E6FE" : 9223372036854775807,
+    "956D2B21DD155C49504BB67697A67F7C5351A353" : 9223372036854775807,
+    "D23C0CEAADB77074FDA4459000068A7940EB7AD0" : 9223372036854775807,
+    "5EDDBFA6D441DDCE33D718BFADEE5FFEEEA3D134" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "701FC4DC-4FDB-451F-A424-1D50198C2C60",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "380E7A403870368C5E27D2180E11354FCFF4E6FE" : "Blaupause\/.build\/checkouts\/Files.git-6739420172119258925\/",
+    "956D2B21DD155C49504BB67697A67F7C5351A353" : "Blaupause\/.build\/checkouts\/Result.git-8684547452332391156\/",
+    "D23C0CEAADB77074FDA4459000068A7940EB7AD0" : "Blaupause\/.build\/checkouts\/Commandant.git-3062511658102057207\/",
+    "5EDDBFA6D441DDCE33D718BFADEE5FFEEEA3D134" : "Blaupause\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Blaupause",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Blaupause.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "\/Users\/marius\/Developer\/macOS\/Blaupause\/.build\/repositories\/Files.git-6739420172119258925",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "380E7A403870368C5E27D2180E11354FCFF4E6FE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/mRs-\/Blaupause.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5EDDBFA6D441DDCE33D718BFADEE5FFEEEA3D134"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "\/Users\/marius\/Developer\/macOS\/Blaupause\/.build\/repositories\/Result.git-8684547452332391156",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "956D2B21DD155C49504BB67697A67F7C5351A353"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "\/Users\/marius\/Developer\/macOS\/Blaupause\/.build\/repositories\/Commandant.git-3062511658102057207",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D23C0CEAADB77074FDA4459000068A7940EB7AD0"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 //
-//  ViperCommand.swift
+//  MVVMCommand.swift
 //  Blaupause
 //
 //  Created by Marius Landwehr on 17.04.17.
@@ -10,7 +10,7 @@ import Foundation
 import Commandant
 import Result
 
-struct ViperCommand: CommandProtocol {
+struct MVVMCommand: CommandProtocol {
     
     struct Options: OptionsProtocol {
         let moduleName: String
@@ -21,16 +21,16 @@ struct ViperCommand: CommandProtocol {
         
         static func evaluate(_ m: CommandMode) -> Result<Options, CommandantError<CommandantError<()>>> {
             return create
-            <*> m <| Argument(usage: "Name of the new Viper Module")
+                <*> m <| Argument(usage: "Name of the new MVVM Module")
         }
     }
     
-    var verb: String = "viper"
-    var function: String = "Creates the default template for a VIPER Module"
+    var verb: String = "MVVM"
+    var function: String = "Creates the default template for a MVVM Module"
     
-    func run(_ options: Options) -> Result<(), CommandantError<()>> {
+    func run(_ options: MVCCommand.Options) -> Result<(), CommandantError<()>> {
         
-        let template = BuildInTemplates.Viper.template()
+        let template = BuildInTemplates.MVVM.template()
         let placeHolderProvider = PlaceHolderProvider(placeHolderName: options.moduleName)
         let generator = TemplateGenerator(with: template, and: placeHolderProvider)
         generator.generate()

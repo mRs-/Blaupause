@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		29AB6D401EA4E4F900456722 /* ViperCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AB6D3F1EA4E4F900456722 /* ViperCommand.swift */; };
+		29AB6D441EA4F77900456722 /* MVCCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AB6D431EA4F77900456722 /* MVCCommand.swift */; };
+		29AB6D461EA4F9DB00456722 /* MVVMCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AB6D451EA4F9DB00456722 /* MVVMCommand.swift */; };
 		OBJ_101 /* Files.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_46 /* Files.framework */; };
 		OBJ_102 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_47 /* Result.framework */; };
 		OBJ_103 /* Commandant.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = OBJ_48 /* Commandant.framework */; };
@@ -69,6 +71,8 @@
 
 /* Begin PBXFileReference section */
 		29AB6D3F1EA4E4F900456722 /* ViperCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViperCommand.swift; sourceTree = "<group>"; };
+		29AB6D431EA4F77900456722 /* MVCCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVCCommand.swift; sourceTree = "<group>"; };
+		29AB6D451EA4F9DB00456722 /* MVVMCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MVVMCommand.swift; sourceTree = "<group>"; };
 		OBJ_15 /* PlaceHoldable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHoldable.swift; sourceTree = "<group>"; };
 		OBJ_16 /* PlaceHolderNameInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderNameInjector.swift; sourceTree = "<group>"; };
 		OBJ_18 /* BuildInTemplates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildInTemplates.swift; sourceTree = "<group>"; };
@@ -138,17 +142,12 @@
 			isa = PBXGroup;
 			children = (
 				29AB6D3F1EA4E4F900456722 /* ViperCommand.swift */,
+				29AB6D431EA4F77900456722 /* MVCCommand.swift */,
+				29AB6D451EA4F9DB00456722 /* MVVMCommand.swift */,
 			);
 			name = Commands;
 			path = Sources/Blaupause/Commands;
 			sourceTree = SOURCE_ROOT;
-		};
-		OBJ_10 /* Console */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Console;
-			sourceTree = "<group>";
 		};
 		OBJ_14 /* PlaceHolder */ = {
 			isa = PBXGroup;
@@ -285,7 +284,6 @@
 			isa = PBXGroup;
 			children = (
 				29AB6D3E1EA4E4F900456722 /* Commands */,
-				OBJ_10 /* Console */,
 				OBJ_9 /* main.swift */,
 				OBJ_14 /* PlaceHolder */,
 				OBJ_17 /* Templates */,
@@ -432,10 +430,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				29AB6D441EA4F77900456722 /* MVCCommand.swift in Sources */,
 				OBJ_88 /* main.swift in Sources */,
 				OBJ_92 /* PlaceHoldable.swift in Sources */,
 				29AB6D401EA4E4F900456722 /* ViperCommand.swift in Sources */,
 				OBJ_93 /* PlaceHolderNameInjector.swift in Sources */,
+				29AB6D461EA4F9DB00456722 /* MVVMCommand.swift in Sources */,
 				OBJ_94 /* BuildInTemplates.swift in Sources */,
 				OBJ_95 /* TemplateGenerator.swift in Sources */,
 				OBJ_96 /* TemplateParser.swift in Sources */,
