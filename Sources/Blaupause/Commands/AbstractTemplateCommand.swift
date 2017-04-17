@@ -25,10 +25,14 @@ class AbstractTemplateCommand: CommandProtocol {
         }
     }
     
-    var verb: String = "viper"
-    var function: String = "Creates the default template for a VIPER Module"
+    var verb: String {
+        fatalError("Must be overwritten in subclass")
+    }
+    var function: String {
+        fatalError("Must be overwritten in subclass")
+    }
     var template: BuildInTemplates! {
-        fatalError("Must be overitten in subclass")
+        fatalError("Must be overwritten in subclass")
     }
     
     func run(_ options: Options) -> Result<(), CommandantError<()>> {
