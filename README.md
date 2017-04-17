@@ -8,8 +8,8 @@ Blaupause viper FooBar
 ```
 
 # ToDo
-- [ ] Creating MVC Command
-- [ ] Creating MVVM Command
+- [x] Creating MVC Command
+- [x] Creating MVVM Command
 - [ ] Error Handling if the Folder is already there
 - [ ] JSON Parsing for template files
 - [ ] Create a wizard when starting without options
