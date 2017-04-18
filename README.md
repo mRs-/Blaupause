@@ -7,6 +7,16 @@ Initial commit
 Blaupause viper FooBar
 ```
 
+# Usage to create a new MVC Module
+```
+Blaupause mvc FooBar
+```
+
+# Usage to create a new MVVM Module
+```
+Blaupause mvvm FooBar
+```
+
 # ToDo
 - [x] Creating MVC Command
 - [x] Creating MVVM Command
