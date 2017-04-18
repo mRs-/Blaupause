@@ -17,6 +17,7 @@ DispatchQueue.global().async {
     registry.register(ViperCommand())
     registry.register(MVCCommand())
     registry.register(MVVMCommand())
+    registry.register(TemplateCommand())
     registry.register(HelpCommand(registry: registry))
     
     

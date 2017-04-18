@@ -7,10 +7,6 @@
 //
 
 import Foundation
-//import os.log
-//import os.activity
-
-//let jsonLogging: OSLog = OSLog(subsystem: "de.mariuslandwehr.blaupause", category: "JSON")
 
 class TemplateParser {
     
@@ -20,29 +16,51 @@ class TemplateParser {
         self.data = data
     }
     
-    func parse() {
+    func parse() throws -> [TemplateGenerateable] {
         
-        do {
-            try serialize().map {
+        let parsed = try serialize().map({ (value: Any) -> TemplateGenerateable in
+            
+            func parseRecursive(value: [String: Any]) throws -> TemplateGenerateable {
                 
-                print($0.key)
-                print($0.value)
+                guard let type = value["type"] as? String,
+                    let name = value["name"] as? String else {
+                        throw TypeNotSetError()
+                }
                 
-//                let template = Template(with: <#T##Template.Type#>, andName: <#T##String#>)
+                switch type.lowercased() {
+                case "file":
+                    return File(name: name)
+                case "folder":
+                    
+                    var children: [TemplateGenerateable]? = nil
+                    
+                    if let unparsedChildren = value["children"] as? [[String: Any]] {
+                        children = try unparsedChildren.map{
+                            try parseRecursive(value: $0)
+                        }
+                    }
+                    
+                    return Folder(name: name, children: children)
+                default:
+                    throw TypeNotSupportedError()
+                }
                 
             }
             
+            guard let dict = value as? [String : Any] else {
+                throw TypeNotADictionaryError()
+            }
             
-        } catch {
-//            os_log("Failed to create JSON", log: jsonLogging, type: .error)
-        }
+            return try parseRecursive(value: dict)
+        })
+        
+        return parsed
     }
     
-    private func serialize() throws -> [String: Any] {
+    private func serialize() throws -> [Any] {
         let templateJSON = try JSONSerialization.jsonObject(with: data, options: [])
         
-        guard let jsonArray = templateJSON as? [String: Any] else {
-//            os_log("Template is not beginning with JSON", log: jsonLogging, type: .error)
+        guard let jsonArray = templateJSON as? [Any] else {
             throw TemplateIsNotArrayError()
         }
         
@@ -51,3 +69,6 @@ class TemplateParser {
 }
 
 class TemplateIsNotArrayError: Error { }
+class TypeNotADictionaryError: Error { }
+class TypeNotSetError: Error { }
+class TypeNotSupportedError: Error { }
