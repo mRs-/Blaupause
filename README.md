@@ -21,8 +21,8 @@ Blaupause mvvm FooBar
 - [x] Creating MVC Command
 - [x] Creating MVVM Command
 - [x] Error Handling if the Folder is already there
-- [ ] JSON Parsing for template files
+- [x] JSON Parsing for template files
 - [ ] Create a wizard when starting without options
 - [ ] Publish it to Homebrew
-- [ ] Add ability to parse .blaupause.json files to create custom template that can be provided
+- [x] Add ability to parse .blaupause.json files to create custom template that can be provided
 - [ ] Unit Testing
