@@ -20,7 +20,7 @@ protocol TemplateGenerateable: TemplateNameable {
 }
 
 extension TemplateGenerateable {
-    
+
     var nameWithoutPlaceHolder: String {
         let injector = PlaceHolderNameInjector(stringWithPlaceHolder: self, and: placeHolderProvider)
         return injector.nameWithoutPlaceHolder()

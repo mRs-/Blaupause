@@ -11,17 +11,16 @@ import Commandant
 import Dispatch
 
 DispatchQueue.global().async {
-    
+
     let registry = CommandRegistry<CommandantError<()>>()
-    
+
     registry.register(ViperCommand())
     registry.register(MVCCommand())
     registry.register(MVVMCommand())
     registry.register(TemplateCommand())
     registry.register(HelpCommand(registry: registry))
-    
-    
-    registry.main(defaultVerb: ViperCommand().verb) { error in
+
+    registry.main(defaultVerb: TemplateCommand().verb) { error in
         print(error.description)
     }
 }

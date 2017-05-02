@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_50"
+               BlueprintIdentifier = "OBJ_55"
                BuildableName = "Files.framework"
                BlueprintName = "Files"
                ReferencedContainer = "container:Blaupause.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_57"
+               BlueprintIdentifier = "OBJ_62"
                BuildableName = "Result.framework"
                BlueprintName = "Result"
                ReferencedContainer = "container:Blaupause.xcodeproj">
@@ -42,7 +42,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_65"
+               BlueprintIdentifier = "OBJ_70"
                BuildableName = "Commandant.framework"
                BlueprintName = "Commandant"
                ReferencedContainer = "container:Blaupause.xcodeproj">
@@ -56,7 +56,21 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "OBJ_83"
+               BlueprintIdentifier = "OBJ_88"
+               BuildableName = "SwiftyJSON.framework"
+               BlueprintName = "SwiftyJSON"
+               ReferencedContainer = "container:Blaupause.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "OBJ_95"
                BuildableName = "Blaupause"
                BlueprintName = "Blaupause"
                ReferencedContainer = "container:Blaupause.xcodeproj">
@@ -87,7 +101,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "OBJ_50"
+            BlueprintIdentifier = "OBJ_55"
             BuildableName = "Files.framework"
             BlueprintName = "Files"
             ReferencedContainer = "container:Blaupause.xcodeproj">

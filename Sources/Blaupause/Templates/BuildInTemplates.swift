@@ -12,7 +12,7 @@ enum BuildInTemplates {
     case Viper
     case MVC
     case MVVM
-    
+
     func template() -> [TemplateGenerateable] {
         switch self {
         case .MVC:

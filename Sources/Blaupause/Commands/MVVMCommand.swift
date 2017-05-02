@@ -9,15 +9,15 @@
 import Foundation
 
 final class MVVMCommand: AbstractTemplateCommand {
-    
+
     override var verb: String {
         return "mvvm"
     }
-    
+
     override var function: String {
         return "Creates the default template for a MVVM Module"
     }
-    
+
     override var template: BuildInTemplates! {
         return .MVVM
     }

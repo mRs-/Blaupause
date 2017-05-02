@@ -6,6 +6,7 @@
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "380E7A403870368C5E27D2180E11354FCFF4E6FE" : 9223372036854775807,
     "956D2B21DD155C49504BB67697A67F7C5351A353" : 9223372036854775807,
+    "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : 9223372036854775807,
     "D23C0CEAADB77074FDA4459000068A7940EB7AD0" : 9223372036854775807,
     "5EDDBFA6D441DDCE33D718BFADEE5FFEEEA3D134" : 9223372036854775807
   },
@@ -13,6 +14,7 @@
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "380E7A403870368C5E27D2180E11354FCFF4E6FE" : "Blaupause\/.build\/checkouts\/Files.git-6739420172119258925\/",
     "956D2B21DD155C49504BB67697A67F7C5351A353" : "Blaupause\/.build\/checkouts\/Result.git-8684547452332391156\/",
+    "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3" : "Blaupause\/.build\/checkouts\/SwiftyJSON.git-3043514560129222422\/",
     "D23C0CEAADB77074FDA4459000068A7940EB7AD0" : "Blaupause\/.build\/checkouts\/Commandant.git-3062511658102057207\/",
     "5EDDBFA6D441DDCE33D718BFADEE5FFEEEA3D134" : "Blaupause\/"
   },
@@ -34,6 +36,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "\/Users\/marius\/Developer\/macOS\/Blaupause\/.build\/repositories\/Result.git-8684547452332391156",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "956D2B21DD155C49504BB67697A67F7C5351A353"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "\/Users\/marius\/Developer\/macOS\/Blaupause\/.build\/repositories\/SwiftyJSON.git-3043514560129222422",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C861FC00CEE0F6A6BE81FCFF6785FAA78C58EBB3"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "\/Users\/marius\/Developer\/macOS\/Blaupause\/.build\/repositories\/Commandant.git-3062511658102057207",

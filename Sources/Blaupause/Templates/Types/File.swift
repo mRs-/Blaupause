@@ -13,11 +13,11 @@ struct File: TemplateGenerateable {
 
     let name: String
     var placeHolderProvider: PlaceholderNameable!
-    
+
     init(name: String) {
         self.name = name
     }
-    
+
     func generate(with currentPath: String = "") throws -> RelativePath? {
         try Files.Folder(path: currentPath).createFile(named: nameWithoutPlaceHolder)
         return nil // we need no path for files
