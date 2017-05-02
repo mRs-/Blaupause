@@ -18,33 +18,45 @@ class TemplateParser {
 
     func parse() throws -> [TemplateGenerateable] {
 
-        let parsed = try serialize().map({ (value: Any) -> TemplateGenerateable in
-
+        let parsedTemplateGeneratable = try serialize().map({ (value: Any) -> TemplateGenerateable in
+            
+            /// Generates the recusrive structure from the JSON File
+            ///
+            /// - Parameter value: must be an JSON-Dictionary
+            /// - Returns: TemplateGeneratable content
+            /// - Throws: TypeNotSupportedError, TypeNotADictionaryError, TypeNotSetError
             func parseRecursive(value: [String: Any]) throws -> TemplateGenerateable {
 
-                guard let type = value["type"] as? String,
+                // get name and type
+                guard
+                    let type = value["type"] as? String,
                     let name = value["name"] as? String else {
                         throw TypeNotSetError()
                 }
 
                 switch type.lowercased() {
-                case "file":
+                    
+                case "file": // generate a file
                     return File(name: name)
-                case "folder":
+                    
+                case "folder": // generate a folder, can be recursive
 
                     var children: [TemplateGenerateable]? = nil
 
+                    // when we got children we try to parse them as well
                     if let unparsedChildren = value["children"] as? [[String: Any]] {
+                        
+                        // try to map the children recursive
                         children = try unparsedChildren.map {
                             try parseRecursive(value: $0)
                         }
                     }
 
                     return Folder(name: name, children: children)
+                    
                 default:
                     throw TypeNotSupportedError()
                 }
-
             }
 
             guard let dict = value as? [String : Any] else {
@@ -54,10 +66,11 @@ class TemplateParser {
             return try parseRecursive(value: dict)
         })
 
-        return parsed
+        return parsedTemplateGeneratable
     }
 
     private func serialize() throws -> [Any] {
+        
         let templateJSON = try JSONSerialization.jsonObject(with: data, options: [])
 
         guard let jsonArray = templateJSON as? [Any] else {
