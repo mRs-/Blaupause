@@ -1,5 +1,5 @@
 # Blaupause 
-Is the missing template generator for creating VIPER, MVC, MVVM, etc. templates for Xcode
+Is the missing template generator for creating VIPER, MVC, MVVM, etc. templates for your Projects.
 
 ## Installation
 
@@ -29,6 +29,12 @@ Blaupause mvc FooBar
 ```shell
 Blaupause mvvm FooBar
 ```
+
+### Usage to create a new structure from your template
+```shell
+Blaupause template FooBar
+```
+Searchs for a .blaupause.json file in the current path of Blaupause execution.
 
 ## JSON Templates
 Blaupause has the ability to create your own custom templates. If you want to create your own implementation Blaupause always checks the current execution path for a `.blaupause.json` file with the current implementation for a Template. Two different types are supported `Folder` and `Files`.
