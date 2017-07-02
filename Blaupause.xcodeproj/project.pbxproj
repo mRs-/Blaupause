@@ -41,37 +41,39 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		29187E6B1EB8D62B0081D5DD /* PBXContainerItemProxy */ = {
+		299EE2D81EEB3258003D5CA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = OBJ_59;
+			remoteInfo = Result;
+		};
+		299EE2D91EEB3258003D5CA2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_52;
 			remoteInfo = Files;
 		};
-		29187E6C1EB8D62B0081D5DD /* PBXContainerItemProxy */ = {
+		299EE2DA1EEB3258003D5CA2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_59;
 			remoteInfo = Result;
 		};
-		29187E6D1EB8D62B0081D5DD /* PBXContainerItemProxy */ = {
+		299EE2DB1EEB3258003D5CA2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = OBJ_67;
 			remoteInfo = Commandant;
 		};
-		29187E6E1EB8D62B0081D5DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = OBJ_1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = OBJ_59;
-			remoteInfo = Result;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2971F8DA1F0976C900AA1057 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2971F8DB1F0976CC00AA1057 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		OBJ_11 /* AbstractTemplateCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractTemplateCommand.swift; sourceTree = "<group>"; };
 		OBJ_12 /* MVCCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCCommand.swift; sourceTree = "<group>"; };
 		OBJ_13 /* MVVMCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMCommand.swift; sourceTree = "<group>"; };
@@ -265,16 +267,17 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
+				2971F8DB1F0976CC00AA1057 /* LICENSE */,
+				2971F8DA1F0976C900AA1057 /* README.md */,
 				OBJ_6 /* Package.swift */,
 				OBJ_7 /* Sources */,
 				OBJ_27 /* Tests */,
 				OBJ_28 /* Dependencies */,
 				OBJ_47 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -383,7 +386,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_47 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -458,22 +461,22 @@
 		OBJ_108 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_52 /* Files */;
-			targetProxy = 29187E6B1EB8D62B0081D5DD /* PBXContainerItemProxy */;
+			targetProxy = 299EE2D91EEB3258003D5CA2 /* PBXContainerItemProxy */;
 		};
 		OBJ_109 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_59 /* Result */;
-			targetProxy = 29187E6C1EB8D62B0081D5DD /* PBXContainerItemProxy */;
+			targetProxy = 299EE2DA1EEB3258003D5CA2 /* PBXContainerItemProxy */;
 		};
 		OBJ_110 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_67 /* Commandant */;
-			targetProxy = 29187E6D1EB8D62B0081D5DD /* PBXContainerItemProxy */;
+			targetProxy = 299EE2DB1EEB3258003D5CA2 /* PBXContainerItemProxy */;
 		};
 		OBJ_84 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = OBJ_59 /* Result */;
-			targetProxy = 29187E6E1EB8D62B0081D5DD /* PBXContainerItemProxy */;
+			targetProxy = 299EE2D81EEB3258003D5CA2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
