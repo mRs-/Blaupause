@@ -10,10 +10,10 @@ import Foundation
 
 class TemplateGenerator {
 
-    let templates: [TemplateGenerateable]
-    let placeHolderProvider: PlaceholderNameable
+    let templates: [GenerateAble]
+    let placeHolderProvider: PlaceholderReplaceable
 
-    init(with templates: [TemplateGenerateable], and placeHolderProvider: PlaceholderNameable) {
+    init(with templates: [GenerateAble], and placeHolderProvider: PlaceholderReplaceable) {
         self.templates = templates
         self.placeHolderProvider = placeHolderProvider
     }
@@ -23,7 +23,7 @@ class TemplateGenerator {
         try generate(with: templates)
     }
 
-    private func generate(with templates: [TemplateGenerateable], and relativePath: RelativePath = "") throws {
+    private func generate(with templates: [GenerateAble], and relativePath: RelativePath = "") throws {
 
         try templates.forEach {
 
@@ -32,7 +32,7 @@ class TemplateGenerator {
 
             let returnedRelativePath = try template.generate(with: relativePath) ?? ""
 
-            if let children = (template as? TemplateParantable)?.children {
+            if let children = (template as? ParentAble)?.children {
                 try generate(with: children, and: returnedRelativePath)
             }
         }

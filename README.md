@@ -80,6 +80,10 @@ The Files Type creates a File for you. A File can't hold chilrens.
 }
 ```
 
+## Contributing
+If you want to contribute you need to check out the sources and run `swift package generate-xcodeproj` to get this up and running. If you can fix the issue yourself please do so and start a pull request with your fix. If you're not confident to fix the bug don't be afraid to generate a issue.
+
+
 ## ToDo
 - [x] Creating MVC Command
 - [x] Creating MVVM Command

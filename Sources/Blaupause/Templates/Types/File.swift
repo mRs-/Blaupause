@@ -9,17 +9,25 @@
 import Foundation
 import Files
 
-struct File: TemplateGenerateable {
+struct File: GenerateAble, FileTemplateAble {
 
     let name: String
-    var placeHolderProvider: PlaceholderNameable!
+    var placeHolderProvider: PlaceholderReplaceable!
+    var fileTemplatePath: String?
 
     init(name: String) {
         self.name = name
     }
 
     func generate(with currentPath: String = "") throws -> RelativePath? {
-        try Files.Folder(path: currentPath).createFile(named: nameWithoutPlaceHolder)
+        
+        if let templateFilePath = fileTemplatePath {
+            // when we have a template file we need create a file from there
+            return try replacePlaceholder(in: templateFilePath)
+        } else {
+            try Files.Folder(path: currentPath).createFile(named: nameWithoutPlaceHolder)
+        }
+        
         return nil // we need no path for files
     }
 }

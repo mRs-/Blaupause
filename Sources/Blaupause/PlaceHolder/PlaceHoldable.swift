@@ -8,10 +8,12 @@
 
 import Foundation
 
-protocol PlaceholderNameable {
+protocol PlaceholderReplaceable {
     var placeHolderName: String { get set }
+    var placeHolderToken: String { get set }
 }
 
-struct PlaceHolderProvider: PlaceholderNameable {
+struct PlaceHolderProvider: PlaceholderReplaceable {
     var placeHolderName: String = "Map"
+    var placeHolderToken: String = "*"
 }

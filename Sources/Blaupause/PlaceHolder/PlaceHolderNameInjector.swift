@@ -9,18 +9,17 @@
 import Foundation
 
 class PlaceHolderNameInjector {
-
-    let template: TemplateNameable
-    let placeHolderProvider: PlaceholderNameable
-
-    init(stringWithPlaceHolder: TemplateNameable, and nameProvider: PlaceholderNameable) {
+    
+    let template: NameAble
+    let placeHolderProvider: PlaceholderReplaceable
+    
+    init(stringWithPlaceHolder: NameAble, and nameProvider: PlaceholderReplaceable) {
         self.template = stringWithPlaceHolder
         self.placeHolderProvider = nameProvider
     }
-
+    
     func nameWithoutPlaceHolder() -> String {
-
-        return template.name.replacingOccurrences(of: "*",
+        return template.name.replacingOccurrences(of: placeHolderProvider.placeHolderToken,
                                                   with: placeHolderProvider.placeHolderName)
     }
 }

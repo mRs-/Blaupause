@@ -16,16 +16,16 @@ class TemplateParser {
         self.data = data
     }
 
-    func parse() throws -> [TemplateGenerateable] {
+    func parse() throws -> [GenerateAble] {
 
-        let parsedTemplateGeneratable = try serialize().map({ (value: Any) -> TemplateGenerateable in
+        let parsedTemplateGeneratable = try serialize().map({ (value: Any) -> GenerateAble in
             
             /// Generates the recusrive structure from the JSON File
             ///
             /// - Parameter value: must be an JSON-Dictionary
             /// - Returns: TemplateGeneratable content
             /// - Throws: TypeNotSupportedError, TypeNotADictionaryError, TypeNotSetError
-            func parseRecursive(value: [String: Any]) throws -> TemplateGenerateable {
+            func parseRecursive(value: [String: Any]) throws -> GenerateAble {
 
                 // get name and type
                 guard
@@ -37,11 +37,13 @@ class TemplateParser {
                 switch type.lowercased() {
                     
                 case "file": // generate a file
-                    return File(name: name)
+                    var file = File(name: name)
+                    file.fileTemplatePath = value["file"] as? String
+                    return file
                     
                 case "folder": // generate a folder, can be recursive
 
-                    var children: [TemplateGenerateable]? = nil
+                    var children: [GenerateAble]? = nil
 
                     // when we got children we try to parse them as well
                     if let unparsedChildren = value["children"] as? [[String: Any]] {

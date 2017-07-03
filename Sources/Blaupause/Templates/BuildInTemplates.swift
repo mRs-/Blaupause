@@ -13,7 +13,7 @@ enum BuildInTemplates {
     case MVC
     case MVVM
 
-    func template() -> [TemplateGenerateable] {
+    func template() -> [GenerateAble] {
         switch self {
         case .MVC:
             return [

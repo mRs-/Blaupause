@@ -9,14 +9,14 @@
 import Foundation
 import Files
 
-struct Folder: TemplateGenerateable, TemplateParantable {
+struct Folder: GenerateAble, ParentAble {
 
-    var placeHolderProvider: PlaceholderNameable!
+    var placeHolderProvider: PlaceholderReplaceable!
 
     let name: String
-    let children: [TemplateGenerateable]?
+    let children: [GenerateAble]?
 
-    init(name: String, children: [TemplateGenerateable]?) {
+    init(name: String, children: [GenerateAble]?) {
         self.name = name
         self.children = children
     }
